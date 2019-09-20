@@ -4,7 +4,7 @@ public class Calculette {
 
     private double actualvalue;
 
-    public Calculette(double value) {
+    public Calculette() {
         actualvalue = 0;
     }
 
@@ -27,4 +27,5 @@ public class Calculette {
     public String toString() {
         return "" + actualvalue;
     }
+
 }
