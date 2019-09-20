@@ -10,12 +10,17 @@ public class Utilisateur {
 
 
     public void effectuerOperation(String operation, double operande){
-        macalculette.calculer(operation,operande);
-        Command c = new Command(operation,operande,macalculette);
-        historique.add(c);
+        Command cmd = new Command(operation,operande,macalculette);
+        cmd.executer();
+        historique.push(cmd);
     }
 
     public void annulerOperation(int nboperations){
+
+        while (!historique.isEmpty() && nboperations > 0){
+            historique.pop().annuler();
+            nboperations--;
+        }
 
     }
 
