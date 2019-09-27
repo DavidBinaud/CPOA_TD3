@@ -3,18 +3,13 @@ package fr.umontpellier.iut.exo2;
 public class App {
     public static void main(String[] args) {
 
-        Utilisateur utilisateur = new Utilisateur();
+       Formule formule = new Formule("(200+50)*5+9/3");
+        System.out.println(formule.toString());
+        System.out.println(formule.getValeur());
 
 
-        for (int j = 0; j <= 100; j++) {
-            utilisateur.effectuerOperation("+",j);
-            System.out.println(utilisateur.toString());
-        }
-
-
-        for (int j = 0; j < 100; j++) {
-            utilisateur.annulerOperation(1);
-            System.out.println(utilisateur.toString());
-        }
+        Formule formulelongue = new Formule("21-9+5*20/(947  - 6 - 891)+18");
+        System.out.println(formulelongue.toString());
+        System.out.println(formulelongue.getValeur());
     }
 }
