@@ -1,6 +1,6 @@
 package fr.umontpellier.iut.exo2;
 
-public class CommandeNombre {
+public class CommandeNombre implements Commande{
 
     private String operateur;
 
@@ -14,7 +14,7 @@ public class CommandeNombre {
         this.calculette = calculette;
     }
 
-    void executer(){
+    public void executer(){
         calculette.calculer(operateur,operande);
     }
 
