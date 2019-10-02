@@ -31,7 +31,7 @@ public class Utilisateur {
 
         while (!historiqueannulation.isEmpty() && nboperations > 0){
             Command c = historiqueannulation.pop();
-            c.annuler();
+            c.executer();
             historique.push(c);
             nboperations--;
         }
