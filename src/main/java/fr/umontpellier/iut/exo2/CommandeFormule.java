@@ -1,6 +1,6 @@
 package fr.umontpellier.iut.exo2;
 
-public class CommandeFormule {
+public class CommandeFormule implements Commande{
 
     private Formule formule;
 
@@ -13,7 +13,7 @@ public class CommandeFormule {
     }
 
 
-    void executer(){
+    public void executer(){
         delegue.executer();
     }
 
