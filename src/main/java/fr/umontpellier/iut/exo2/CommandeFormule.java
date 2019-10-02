@@ -4,12 +4,12 @@ public class CommandeFormule {
 
     private Formule formule;
 
-    private Command delegue;
+    private CommandeNombre delegue;
 
 
     public CommandeFormule(String operateur,String formule, Calculette calculette) {
         this.formule = new Formule(formule);
-        delegue = new Command(operateur,this.formule.getValeur(),calculette);
+        delegue = new CommandeNombre(operateur,this.formule.getValeur(),calculette);
     }
 
 
